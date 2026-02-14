@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(180deg, #2a163a, #3b1d5a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+/* Main card */
+.card {
+  background: rgba(255, 255, 255, 0.14);
+  padding: 44px 46px;
+  border-radius: 30px;
+  text-align: center;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 0 50px rgba(255, 182, 213, 0.45);
+  animation: float 4s ease-in-out infinite;
+  z-index: 5;
+  max-width: 380px;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: #ffb6e6;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.msg {
+  font-size: 16px;
+  color: #f7f2f7;
+  margin: 15px 0;
+  line-height: 1.8;
+}
+
+.msg.cute {
+  color: #ffd9ef;
+}
+
+.msg.from {
+  color: #eec6ff;
+  font-size: 15px;
+}
+
+.end {
+  margin-top: 22px;
+  font-size: 14px;
+  color: #ffd1f0;
+}
+
+/* Name at end */
+.from-name {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #f6c8ff;
+  letter-spacing: 1px;
+}
+
+/* Floating effect */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Heart rain */
+.bg-hearts::before {
+  content: "💖 💕 💗 💜 🤍 🌸";
+  position: absolute;
+  width: 100%;
+  top: -10%;
+  font-size: 26px;
+  animation: fall 14s linear infinite;
+  opacity: 0.75;
+}
+
+/* Star sparkles */
+.bg-stars::before {
+  content: "✨ ✨ ✨ ✨ ✨";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 22px;
+  opacity: 0.5;
+  animation: sparkle 9s linear infinite;
+}
+
+@keyframes fall {
+  0% { top: -10%; opacity: 1; }
+  100% { top: 110%; opacity: 0; }
+}
+
+@keyframes sparkle {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
