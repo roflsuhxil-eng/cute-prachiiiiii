@@ -51,7 +51,7 @@ h1 {
   color: #ffd1f0;
 }
 
-/* Name at end */
+/* Name */
 .from-name {
   margin-top: 12px;
   font-size: 14px;
@@ -59,7 +59,7 @@ h1 {
   letter-spacing: 1px;
 }
 
-/* Floating effect */
+/* Floating card animation */
 @keyframes float {
   0% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
@@ -96,4 +96,15 @@ h1 {
 @keyframes sparkle {
   0% { transform: translateY(0); }
   100% { transform: translateY(-100%); }
+}
+
+/* JS animations support */
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-120vh); opacity: 0; }
+}
+
+@keyframes fadeOut {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.5); opacity: 0; }
 }
